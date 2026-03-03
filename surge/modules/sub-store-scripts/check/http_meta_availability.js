@@ -84,6 +84,7 @@ async function operator(proxies = [], targetPlatform, env) {
       const node = ProxyUtils.produce([{ ...proxy }], 'ClashMeta', 'internal')?.[0]
       if (node) {
         for (const key in proxy) {
+          $.info(`key=  ${key}`)
           if (/^_/i.test(key)) {
             node[key] = proxy[key]
           }
