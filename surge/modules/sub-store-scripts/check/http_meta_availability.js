@@ -85,6 +85,7 @@ async function operator(proxies = [], targetPlatform, env) {
       if (node) {
         for (const key in proxy) {
           $.info(`key=  ${key}`)
+          console.log(key)
           if (/^_/i.test(key)) {
             node[key] = proxy[key]
           }
